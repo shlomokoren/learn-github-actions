@@ -7,3 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: docker --version
+      - run: docker build -t shlomoko11/ubuntunet:1.0 .
