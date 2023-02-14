@@ -1,4 +1,6 @@
 name: learn-github-docker-actions
+  with: # Set the secret as an input
+    dockerhub_secret: ${{ secrets.DOCKERHUB_SHLOMOKO_KEY }}
 run-name: ${{ github.actor }} is learning docker GitHub Actions 
 on: [push]
 jobs:
@@ -8,3 +10,4 @@ jobs:
       - uses: actions/checkout@v3
       - run: docker --version
       - run: docker build -t shlomoko11/ubuntunet:1.0 .
+      - run: docker login --username shlomoko11  --password $dockerhub_secret
