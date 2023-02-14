@@ -1,6 +1,6 @@
 name: learn-github-docker-actions
-  env: # Set the secret as an input
-    dockerhub_secret: ${{ secrets.DOCKERHUB_SHLOMOKO_KEY }}
+env: # Set the secret as an input
+   dockerhub_secret: ${{ secrets.DOCKERHUB_SHLOMOKO_KEY }}
 run-name: ${{ github.actor }} is learning docker GitHub Actions 
 on: [push]
 jobs:
